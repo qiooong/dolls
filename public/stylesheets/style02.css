@@ -1,6 +1,6 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: #000000;
+  background: #ffffff;
   text-align:center;
   font-family:Helvetica, Arial;
 }
@@ -14,31 +14,21 @@ body {
     cursor: auto;
      font-family:Helvetica, Arial;
 }
-
-.link:hover {position: relative;
-    left: 20px;
-    cursor: auto;
-    font-family:Helvetica, Arial;
-   
-}
-
-
 a {
-  color: #ffffff;
+  color: #000000;
   text-decoration:none;
   cursor: auto;
-  font-family:Helvetica, Arial;
+   font-family:Helvetica, Arial;
   
 }
-h1{color:#ffffff;
+h1{color:#000000;
   font-size:60px;
   text-align:center;
   font-weight: bold;
   font-family:Helvetica, Arial;
 }
 
-
-h2{color:#ffffff;
+h2{color:#000000;
   font-size:30px;
   line-height: 1.2;
    font-family:Helvetica, Arial;
@@ -46,9 +36,9 @@ h2{color:#ffffff;
 
 h3{font-size:35px;}
 
-p{color:#ffffff;
+p{color:#000000;
   font-size:26px;
-  font-family:Helvetica, Arial;
+   font-family:Helvetica, Arial;
 }
 
 .title{margin-bottom:150px;}
@@ -56,19 +46,3 @@ p{color:#ffffff;
 
 .hometitle{margin:20px 5px 5px 5px;}
 
-.jwplaylistcontainer{visibility: hidden !important;}
-
-#videoToPlay{
-  
-  width:700px;
-  height:500px;
-  display:inline-block;
-  position:relative;
-  left:60px;
-
-        
-}
-
-#camera2_start_screen {
-  background: transparent;
-}

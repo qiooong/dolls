@@ -5,17 +5,35 @@
 <script>
  $.get( "https://cameratag.com/api/v5/videos.json?api_key=QQPmwDETgiCYNXvJuE5G", function( data ) {
       
-      var uuids = $.map(data, function(video) {
-       return '"' + video.uuid + '"';
-      });
-      uuids = '[' + uuids.join(',') + ']';
-      console.log(uuids);
-
-      console.log("<video id='MyPlayer1' data-uuid='"+ uuids +"'></video>");
+      //if you want to show all videos from archive
+      //then you'll need a for loop to iterate over
+      //all the returned values and append them to 
+      //the document.
+      //console.log(data);
+      //var uuids = $.map(data, function(video) {
+       //return '"' + video.uuid + '"';
+      //});
+      //console.log(data.length);
+      //console.log(data[0].uuid);
+      var uuids = [];
+      for(i=0;i<data.length;i++){
+       
+       
+       var indUUID = "'" + data[i].uuid + "'";
+       
+        uuids.push(indUUID);
+       
+      }
+      //console.log(uuids);
       
       
-      $("#videoToPlay").append("<video id='MyPlayer1' data-uuid='"+ uuids +"' data-options='{\"width\":700, \"height\":500, \"autostart\":true, \"repeat\": true, \"primary\":\"html5\"}'></video>");
-      CameraTag.setup();
+      //uuids = '[' + uuids.join(',') + ']';
+      //console.log(uuids);
+      //console.log(uuids);
+      console.log('<video id="MyPlayer1" data-uuid="['+ uuids +']" data-options="{\'width\':700, \'height\':500, \'autostart\':true, \'repeat\': true}"></video>');
+  
+     $("#videoToPlay").append('<video id="MyPlayer1" data-uuid="['+ uuids +']"></video>');
+     CameraTag.setup();
     });
 </script>
 
